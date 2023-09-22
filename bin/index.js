@@ -11,9 +11,12 @@ if ([`develop`].includes(command)) {
     if (command === `develop`) {
         console.log(`\n[othus-scripts] ts => js`);
 
-        console.log(`npx babel ${process.cwd()}\\src --out-dir ${process.cwd()}\\.static`);
-        exec(`npx babel ${process.cwd()}\\src --out-dir ${process.cwd()}\\.static`, { cwd: __dirname }, (error, stdout, stderr) => {
+        exec(`npx tsc`, { cwd: process.cwd() }, (error, stdout, stderr) => {
             console.log(stdout);
+
+            exec(`npx babel ${process.cwd()}\\.static-js --out-dir ${process.cwd()}\\.static-babel`, { cwd: `${__dirname}\\..\\` }, (error, stdout, stderr) => {
+                console.log(stdout);
+            });
         });
     }
 } else {
