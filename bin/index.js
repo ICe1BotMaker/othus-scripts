@@ -16,6 +16,8 @@ if ([`develop`].includes(command)) {
 
             exec(`npx babel ${process.cwd()}\\.static-js --out-dir ${process.cwd()}\\.static-babel`, { cwd: `${__dirname}\\..\\` }, (error, stdout, stderr) => {
                 console.log(stdout);
+
+                exec(`start http://localhost:3000`);
             });
         });
     }
