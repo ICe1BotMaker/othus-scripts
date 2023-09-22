@@ -1,6 +1,6 @@
 {
     "name": "othus-scripts",
-    "version": "1.17.1",
+    "version": "1.17.2",
     "description": "Required libraries with compilers for using othus",
     "main": "index.js",
     "bin": {
@@ -21,7 +21,7 @@
     },
     "devDependencies": {
         "@babel/plugin-syntax-jsx": "^7.22.5",
-        "@babel/preset-typescript": "^7.22.15",
-        "@babel/preset-react": "^7.22.15"
+        "@babel/preset-react": "^7.22.15",
+        "@babel/preset-typescript": "^7.22.15"
     }
 }
